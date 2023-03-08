@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">RongYunTest</string>
+    <string name="rc_permission_request_failed">获取权限失败</string>
+    <string name="rc_unread_message">{0} 条新消息</string>
+    <string name="rc_mention_messages">有人@我%s</string>
+    <string name="rc_load_local_message">网络异常，查看本地历史消息？</string>
+    <string name="rc_dialog_ok">确定</string>
+    <string name="rc_cancel">取消</string>
+    <string name="rc_voip_occupying">声音通道被占用，请稍后再试</string>
+    <string name="rc_voice_release_to_send">松开 结束</string>
+    <string name="rc_voice_press_to_input">按住 说话</string>
 </resources>

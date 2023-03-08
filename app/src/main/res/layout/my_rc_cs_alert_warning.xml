@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/rc_cs_msg"
+        android:id="@+id/my_rc_cs_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -31,7 +31,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@id/rc_btn_ok"
+            android:id="@+id/my_rc_btn_ok"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
