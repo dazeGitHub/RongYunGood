@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {url "https://maven.rongcloud.cn/repository/maven-releases/"}     //融云 maven 仓库地址
+    }
+}
+rootProject.name = "RongYunTest"
+include ':app'
