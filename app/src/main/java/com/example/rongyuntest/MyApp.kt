@@ -11,10 +11,11 @@ import com.bumptech.glide.request.target.Target
 import io.rong.imkit.GlideKitImageEngine
 import io.rong.imkit.RongIM
 import io.rong.imkit.config.RongConfigCenter
+import io.rong.imlib.model.Conversation
 
 
 class MyApp : Application() {
-    val mRongYunAppKey = "0vnjpoad016zz"
+    val mRongYunAppKey = "qd46yzrfqpr8f"
 
     override fun onCreate() {
         super.onCreate()
@@ -30,9 +31,11 @@ class MyApp : Application() {
 //            goToPrivacyActivity()
 //        }
 
-        //设置会话页面的头像为原形
+        //设置会话页面的头像为圆形
         RongConfigCenter.featureConfig().kitImageEngine = object : GlideKitImageEngine() {
-            fun loadConversationPortrait(context: Context, url: String, imageView: ImageView) {
+
+            //override fun loadConversationPortrait(context: Context, url: String, imageView: ImageView) {
+            override fun loadConversationListPortrait(context: Context, url: String, imageView: ImageView, conversation: Conversation) {
                 Glide.with(context).load(url)
                     .apply(RequestOptions.bitmapTransform(CircleCrop()))
                     .into(imageView)

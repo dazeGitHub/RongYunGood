@@ -17,8 +17,7 @@ import io.rong.imlib.model.UserInfo
 
 class MainActivity : AppCompatActivity() {
 
-    //userId 为 1 的 token
-    val mToken = "prmq5fOQH91/GdcM+pAKF5Lc08mnNsXT@h767.cn.rongnav.com;h767.cn.rongcfg.com"
+    val mToken = "hvAprTeOQIJbYWy4hmxbWgvirf4w96KVJexqeSvGbkeBaMSVW+KZnA==@owcl.cn.rongnav.com;owcl.cn.rongcfg.com"
     var targetUserId = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +45,8 @@ class MainActivity : AppCompatActivity() {
         //调用 Server 接口, Server 通过 userId 获取 Token (也就是注册融云用户)
         RongIM.connect(mToken, object : RongIMClient.ConnectCallback() {
             override fun onSuccess(userId: String) {
-                Toast.makeText(this@MainActivity, "RongIM 登录成功", Toast.LENGTH_SHORT).show()
+                Log.e("TAG", "userId = $userId")
+                Toast.makeText(this@MainActivity, "RongIM 登录成功, rongyun userId = $userId", Toast.LENGTH_SHORT).show()
             }
 
             override fun onError(errorCode: RongIMClient.ConnectionErrorCode) {
@@ -84,8 +84,6 @@ class MainActivity : AppCompatActivity() {
     fun jumpConversationActivity(){
         RouteUtils.routeToConversationActivity(this, Conversation.ConversationType.PRIVATE, targetUserId.toString(), false)
     }
-
-
 
     fun refreshRongYunUserInfo(){
         // 允许 SDK 在本地持久化存储用户信息
