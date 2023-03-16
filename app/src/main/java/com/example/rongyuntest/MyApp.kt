@@ -2,12 +2,10 @@ package com.example.rongyuntest
 
 import android.app.Application
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.target.Target
 import io.rong.imkit.GlideKitImageEngine
 import io.rong.imkit.RongIM
 import io.rong.imkit.config.RongConfigCenter
@@ -15,7 +13,7 @@ import io.rong.imlib.model.Conversation
 
 
 class MyApp : Application() {
-    val mRongYunAppKey = "qd46yzrfqpr8f"
+    val mRongYunAppKey = if (BuildConfig.DEBUG) "25wehl3u2g3cw" else "qd46yzrfqpr8f"
 
     override fun onCreate() {
         super.onCreate()
