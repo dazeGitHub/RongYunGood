@@ -13,7 +13,7 @@ import io.rong.imlib.model.Conversation
 
 
 class MyApp : Application() {
-    val mRongYunAppKey = if (BuildConfig.DEBUG) "25wehl3u2g3cw" else "qd46yzrfqpr8f"
+    val mRongYunAppKey = if (BuildConfig.DEBUG) "qd46yzrfqpr8f" else "qd46yzrfqpr8f" //测试 : 25wehl3u2g3cw
 
     override fun onCreate() {
         super.onCreate()

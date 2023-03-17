@@ -19,12 +19,18 @@ import io.rong.imlib.model.UserInfo
 class MainActivity : AppCompatActivity() {
 
     var myRongYunUserId = "1"
-    var myRongYunUserName = "userName1"
-    val mMyRongYunToken = "R88Mcx4IW5/gHTFGZkr8jiA5N7pQvzOH@9lg3.cn.rongnav.com;9lg3.cn.rongcfg.com"
+
+    var myRongYunDevUserName = "devUserName1"
+    var myRongYunProductUserName = "productUserName";
+
+    val mMyRongYunDevToken = "R88Mcx4IW5/gHTFGZkr8jiA5N7pQvzOH@9lg3.cn.rongnav.com;9lg3.cn.rongcfg.com"
+    var mMyRongYunProductToken = "7OmgZ1OJjiMfK08nsO4GvCK9JEi/ThNC@owcl.cn.rongnav.com;owcl.cn.rongcfg.com";
+
     var myRongYunAvatarUrl = "https://img1.baidu.com/it/u=4289695845,2474608469&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
 
+
     var targetRongYunUserId = "72C0247BEB675B7A2327C253315A33E8"
-    var targetRongYunUserName = "张三1";
+    var targetRongYunUserName = "张三a";
     var targetRongYunAvatarUrl = "https://img1.baidu.com/it/u=1403245892,3051757811&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500";
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
     fun rongYunLogin(){
         //调用 Server 接口, Server 通过 userId 获取 Token (也就是注册融云用户)
-        RongIM.connect(mMyRongYunToken, object : RongIMClient.ConnectCallback() {
+        RongIM.connect(mMyRongYunProductToken, object : RongIMClient.ConnectCallback() {
             override fun onSuccess(userId: String) {
                 Log.e("TAG", "userId = $userId")
                 Toast.makeText(this@MainActivity, "RongIM 登录成功, rongyun userId = $userId", Toast.LENGTH_SHORT).show()
@@ -105,7 +111,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun syncMyRongYunUserInfo(){
-        val myUserInfo = UserInfo(myRongYunUserId, myRongYunUserName, Uri.parse(myRongYunAvatarUrl))
+        val myUserInfo = UserInfo(myRongYunUserId, myRongYunProductUserName, Uri.parse(myRongYunAvatarUrl))
         RongUserInfoManager.getInstance().refreshUserInfoCache(myUserInfo)
         Toast.makeText(this@MainActivity, "同步自己的融云用户信息 成功", Toast.LENGTH_SHORT).show()
     }
