@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
     var myRongYunAvatarUrl = "https://img1.baidu.com/it/u=4289695845,2474608469&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
 
 
-    var targetRongYunUserId = "72C0247BEB675B7A2327C253315A33E8"
-    var targetRongYunUserName = "张三a";
+    var targetRongYunUserId = "992967F5DBD4FE3788C621F6C941527F"
+    var targetRongYunUserName = "保定米利昊";
     var targetRongYunAvatarUrl = "https://img1.baidu.com/it/u=1403245892,3051757811&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500";
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,6 +63,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.btn_logout).setOnClickListener{
             logout()
         }
+        findViewById<View>(R.id.btn_test_uri).setOnClickListener{
+            val uri = Uri.parse("")
+            Log.e("TAG", "uri = $uri")
+        }
+
+
+//        String rongYunId = getIntent().getStringExtra(INTENT_KEY_CONVER_RY_ID);
     }
 
     fun rongYunLogin(){

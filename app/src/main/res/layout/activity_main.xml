@@ -90,11 +90,21 @@
         />
 
     <Button
+        android:id = "@+id/btn_test_uri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试 uri"
+        app:layout_constraintTop_toBottomOf="@id/btn_sync_target_rongyun_userinfo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
         android:id = "@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="退出登录"
-        app:layout_constraintTop_toBottomOf="@id/btn_sync_target_rongyun_userinfo"
+        app:layout_constraintTop_toBottomOf="@id/btn_test_uri"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />

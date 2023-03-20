@@ -100,8 +100,7 @@ class MyConversationFragment : ConversationFragment(), OnRefreshListener,
         }
 
     var mNewMentionMessageUnreadObserver: Observer<Int> = Observer { count ->
-            if (RongConfigCenter.conversationConfig()
-                    .isShowNewMentionMessageBar(mMessageViewModel?.curConversationType)
+            if (RongConfigCenter.conversationConfig().isShowNewMentionMessageBar(mMessageViewModel?.curConversationType)
             ) {
                 if (count != null && count > 0) {
                     mUnreadMentionMessageNum?.visibility = View.VISIBLE
