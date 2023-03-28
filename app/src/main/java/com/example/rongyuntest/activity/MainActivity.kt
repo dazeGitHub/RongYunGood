@@ -1,5 +1,9 @@
 package com.example.rongyuntest.activity
 
+import android.app.AlertDialog
+import android.content.Context
+import android.content.DialogInterface
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +18,8 @@ import io.rong.imkit.utils.RouteUtils
 import io.rong.imlib.RongIMClient
 import io.rong.imlib.model.Conversation
 import io.rong.imlib.model.UserInfo
+import java.lang.Exception
+import java.lang.reflect.Field
 
 
 class MainActivity : AppCompatActivity() {
@@ -60,6 +66,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.btn_sync_target_rongyun_userinfo).setOnClickListener{
             syncTargetRongYunUserInfo()
         }
+        findViewById<View>(R.id.btn_test_dialog).setOnClickListener{
+            showPermissionAlert(this@MainActivity, "content", object : DialogInterface.OnClickListener{
+                override fun onClick(p0: DialogInterface?, p1: Int) {
+
+                }
+            })
+        }
         findViewById<View>(R.id.btn_logout).setOnClickListener{
             logout()
         }
@@ -70,6 +83,32 @@ class MainActivity : AppCompatActivity() {
 
 
 //        String rongYunId = getIntent().getStringExtra(INTENT_KEY_CONVER_RY_ID);
+    }
+
+    private fun showPermissionAlert(
+        context: Context,
+        content: String,
+        listener: DialogInterface.OnClickListener
+    ) {
+        val dialog = AlertDialog.Builder(context, R.style.MyDialogStyle)
+            .setMessage(content)
+            .setPositiveButton(R.string.rc_confirm, listener)
+            .setNegativeButton(R.string.rc_cancel, listener)
+            .setNeutralButton(R.string.rc_not_prompt, listener)
+            .setCancelable(false)
+            .create()
+        dialog.show()
+        try {
+            val mAlert : Field = AlertDialog::class.java.getDeclaredField("mAlert");
+            mAlert.isAccessible = true;
+            val mAlertController = mAlert.get(dialog);
+            val mMessage : Field  = mAlertController::class.java.getDeclaredField("mMessageView");
+            mMessage.isAccessible = true;
+            val mMessageView = mMessage.get(mAlertController) as TextView
+            mMessageView.setTextColor(Color.BLUE)
+        } catch (e : Exception ) {
+            e.printStackTrace()
+        }
     }
 
     fun rongYunLogin(){
@@ -114,7 +153,7 @@ class MainActivity : AppCompatActivity() {
 
     //跳转到自定义会话页
     fun jumpConversationActivity(){
-        RouteUtils.routeToConversationActivity(this, Conversation.ConversationType.PRIVATE, targetRongYunUserId.toString(), false)
+        RouteUtils.routeToConversationActivity(this, Conversation.ConversationType.PRIVATE, targetRongYunUserId.toString())
     }
 
     fun syncMyRongYunUserInfo(){
