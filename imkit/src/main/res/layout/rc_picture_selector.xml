@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:scaleType="centerInside"
-                android:src="?attr/picture.arrow_down.icon" />
+                android:src="?attr/picture.arrow_down.icon2" />
         </LinearLayout>
 
         <TextView

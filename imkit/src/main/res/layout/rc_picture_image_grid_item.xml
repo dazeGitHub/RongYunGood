@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_margin="8dp"
-        android:background="?attr/picture.checked.style"
+        android:background="?attr/picture.checked.style2"
         android:gravity="center"
         android:textColor="@color/picture_color_white"
         android:textSize="12sp" />

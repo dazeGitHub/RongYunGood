@@ -21,7 +21,7 @@
         android:id="@+id/fl_top"
         android:layout_width="0dp"
         android:layout_height="44dp"
-        android:background="?attr/picture.ac_preview.bottom.bg"
+        android:background="?attr/picture.ac_preview.bottom.bg2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
             android:layout_marginEnd="12dp"
-            android:background="?attr/picture.checked.style"
+            android:background="?attr/picture.checked.style2"
             android:gravity="center"
             android:textColor="@color/picture_color_white"
             android:textSize="12sp" />
@@ -61,7 +61,7 @@
         android:id="@+id/select_bar_layout"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:background="?attr/picture.ac_preview.bottom.bg"
+        android:background="?attr/picture.ac_preview.bottom.bg2"
         android:gravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
