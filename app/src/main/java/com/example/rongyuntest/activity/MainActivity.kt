@@ -34,10 +34,13 @@ class MainActivity : AppCompatActivity() {
 
     var myRongYunAvatarUrl = "https://img1.baidu.com/it/u=4289695845,2474608469&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
 
+//    var targetRongYunUserId = "992967F5DBD4FE3788C621F6C941527F"
+//    var targetRongYunUserName = "保定米利昊";
+//    var targetRongYunAvatarUrl = "https://img1.baidu.com/it/u=1403245892,3051757811&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500";
 
-    var targetRongYunUserId = "992967F5DBD4FE3788C621F6C941527F"
-    var targetRongYunUserName = "保定米利昊";
-    var targetRongYunAvatarUrl = "https://img1.baidu.com/it/u=1403245892,3051757811&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500";
+    var targetRongYunUserId = "01F0F7C3B6DC7D1533964773E86999F5"
+    var targetRongYunUserName = "罡得教育";
+    var targetRongYunAvatarUrl = "https://zhihuics.oss-cn-hangzhou.aliyuncs.com/upload/2023-02-18/c1284a874a874fb5b17d76748eaa9d5d_盲僧.jpg";
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
