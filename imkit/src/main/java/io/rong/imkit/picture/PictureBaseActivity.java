@@ -116,11 +116,11 @@ public abstract class PictureBaseActivity extends AppCompatActivity implements H
     private void initConfig() {
         // 已选图片列表
         selectionMedias = config.selectionMedias == null ? new ArrayList<LocalMedia>() : config.selectionMedias;
-        openWhiteStatusBar = AttrsUtils.getTypeValueBoolean(this, R.attr.picture_statusFontColor);
+        openWhiteStatusBar = AttrsUtils.getTypeValueBoolean(this, R.attr.picture_statusFontColor2);
 
-        numComplete = AttrsUtils.getTypeValueBoolean(this, R.attr.picture_style_numComplete);
+        numComplete = AttrsUtils.getTypeValueBoolean(this, R.attr.picture_style_numComplete2);
 
-        config.checkNumMode = AttrsUtils.getTypeValueBoolean(this, R.attr.picture_style_checkNumMode);
+        config.checkNumMode = AttrsUtils.getTypeValueBoolean(this, R.attr.picture_style_checkNumMode2);
 
         // 标题栏背景色
         colorPrimary = AttrsUtils.getTypeValueColor(this, R.attr.colorPrimary);

@@ -240,29 +240,29 @@
 
 
     <!--start图库-->
-    <attr name="picture.title.textColor" format="reference|color" />
-    <attr name="picture.right.textColor" format="reference|color" />
-    <attr name="picture.leftBack.icon" format="reference" />
-    <attr name="picture.arrow_down.icon" format="reference" />
-    <attr name="picture.arrow_up.icon" format="reference" />
-    <attr name="picture.num.style" format="reference" />
-    <attr name="picture.checked.style" format="reference" />
-    <attr name="picture.bottom.bg" format="reference|color" />
-    <attr name="picture.preview.textColor" format="reference|color" />
-    <attr name="picture.complete.textColor" format="reference|color" />
-    <attr name="picture.ac_preview.title.textColor" format="reference|color" />
-    <attr name="picture.ac_preview.complete.textColor" format="reference|color" />
-    <attr name="picture.ac_preview.bottom.bg" format="reference|color" />
-    <attr name="picture.status.color" format="reference|color" />
-    <attr name="picture.ac_preview.title.bg" format="reference|color" />
-    <attr name="picture.preview.leftBack.icon" format="reference" />
-    <attr name="picture.statusFontColor" format="boolean" />
-    <attr name="picture.style.numComplete" format="boolean" />
-    <attr name="picture.style.checkNumMode" format="boolean" />
-    <attr name="picture.crop.toolbar.bg" format="reference|color" />
-    <attr name="picture.crop.status.color" format="reference|color" />
-    <attr name="picture.crop.title.color" format="reference|color" />
-    <attr name="picture.folder_checked_dot" format="reference" />
+    <attr name="picture.title.textColor2" format="reference|color" />
+    <attr name="picture.right.textColor2" format="reference|color" />
+    <attr name="picture.leftBack.icon2" format="reference" />
+    <attr name="picture.arrow_down.icon2" format="reference" />
+    <attr name="picture.arrow_up.icon2" format="reference" />
+    <attr name="picture.num.style2" format="reference" />
+    <attr name="picture.checked.style2" format="reference" />
+    <attr name="picture.bottom.bg2" format="reference|color" />
+    <attr name="picture.preview.textColor2" format="reference|color" />
+    <attr name="picture.complete.textColor2" format="reference|color" />
+    <attr name="picture.ac_preview.title.textColor2" format="reference|color" />
+    <attr name="picture.ac_preview.complete.textColor2" format="reference|color" />
+    <attr name="picture.ac_preview.bottom.bg2" format="reference|color" />
+    <attr name="picture.status.color2" format="reference|color" />
+    <attr name="picture.ac_preview.title.bg2" format="reference|color" />
+    <attr name="picture.preview.leftBack.icon2" format="reference" />
+    <attr name="picture.statusFontColor2" format="boolean" />
+    <attr name="picture.style.numComplete2" format="boolean" />
+    <attr name="picture.style.checkNumMode2" format="boolean" />
+    <attr name="picture.crop.toolbar.bg2" format="reference|color" />
+    <attr name="picture.crop.status.color2" format="reference|color" />
+    <attr name="picture.crop.title.color2" format="reference|color" />
+    <attr name="picture.folder_checked_dot2" format="reference" />
     <attr format="color" name="colorPrimary"/>
     <attr format="color" name="colorPrimaryDark"/>
     <!--end图库-->
