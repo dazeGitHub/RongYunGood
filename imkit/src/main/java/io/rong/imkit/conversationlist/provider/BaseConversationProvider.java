@@ -42,18 +42,19 @@ public class BaseConversationProvider implements IViewProvider<BaseUiConversatio
         holder.setText(R.id.rc_conversation_title, uiConversation.mCore.getConversationTitle());
 
         //会话头像
-        if (!TextUtils.isEmpty(uiConversation.mCore.getPortraitUrl())) {
+        if (uiConversation.mCore.getPortraitUrl() != null) {
             RongConfigCenter.featureConfig().getKitImageEngine().loadConversationListPortrait(holder.getContext(), uiConversation.mCore.getPortraitUrl(), holder.<ImageView>getView(R.id.rc_conversation_portrait), uiConversation.mCore);
         } else {
-            int drawableId = R.drawable.rc_default_portrait;
-            if (uiConversation.mCore.getConversationType().equals(Conversation.ConversationType.GROUP)) {
-                drawableId = R.drawable.rc_default_group_portrait;
-            } else if (uiConversation.mCore.getConversationType().equals(Conversation.ConversationType.CHATROOM)) {
-                drawableId = R.drawable.rc_default_chatroom_portrait;
-            } else if (uiConversation.mCore.getConversationType().equals(Conversation.ConversationType.CUSTOMER_SERVICE)) {
-                drawableId = R.drawable.rc_default_chatroom_portrait;
-            }
-            holder.setImageBitmapCircle(R.id.rc_conversation_portrait, drawableId);
+//            int drawableId = R.drawable.rc_default_portrait;
+//            if (uiConversation.mCore.getConversationType().equals(Conversation.ConversationType.GROUP)) {
+//                drawableId = R.drawable.rc_default_group_portrait;
+//            } else if (uiConversation.mCore.getConversationType().equals(Conversation.ConversationType.CHATROOM)) {
+//                drawableId = R.drawable.rc_default_chatroom_portrait;
+//            } else if (uiConversation.mCore.getConversationType().equals(Conversation.ConversationType.CUSTOMER_SERVICE)) {
+//                drawableId = R.drawable.rc_default_chatroom_portrait;
+//            }
+//            holder.setImageBitmapCircle(R.id.rc_conversation_portrait, drawableId);
+            RongConfigCenter.featureConfig().getKitImageEngine().loadConversationListPortrait(holder.getContext(), "", holder.<ImageView>getView(R.id.rc_conversation_portrait), uiConversation.mCore);
         }
         holder.getView(R.id.rc_conversation_portrait).setOnClickListener(new View.OnClickListener() {
             @Override
